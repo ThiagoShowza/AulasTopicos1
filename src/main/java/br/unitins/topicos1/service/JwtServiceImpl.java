@@ -9,6 +9,9 @@ import br.unitins.topicos1.dto.UsuarioResponseDTO;
 import io.smallrye.jwt.build.Jwt;
 import jakarta.enterprise.context.ApplicationScoped;
 
+
+
+// Criacao do TOKEN para login
 @ApplicationScoped
 public class JwtServiceImpl implements JwtService {
 
@@ -22,11 +25,11 @@ public class JwtServiceImpl implements JwtService {
         // exemplo para teste
         Set<String> roles = new HashSet<String>();
         roles.add("User");
-
+        // Momento da criação do TOKEN configurado em application.properties
         return Jwt.issuer("unitins-jwt")
-            .subject(dto.login())
-            .groups(roles)
-            .expiresAt(expiryDate)
+            .subject(dto.login()) //Algo unico para que o usuario possa fazer login
+            .groups(roles) //Um tipo de usuário, ADM, user etc
+            .expiresAt(expiryDate) //Data em que o Token expira
             .sign();
     }
     

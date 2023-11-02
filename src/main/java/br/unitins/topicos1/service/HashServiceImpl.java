@@ -9,6 +9,8 @@ import javax.crypto.spec.PBEKeySpec;
 
 import jakarta.enterprise.context.ApplicationScoped;
 
+// Usado para criptografar a senha
+
 @ApplicationScoped
 public class HashServiceImpl implements HashService {
 
