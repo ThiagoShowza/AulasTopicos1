@@ -2,7 +2,7 @@ package br.unitins.topicos1.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-@JsonFormat(shape = JsonFormat.Shape.OBJECT)//Configura o sistema de forma que o perfil seja em um formato de objeto
+@JsonFormat(shape = JsonFormat.Shape.OBJECT) // Configura o sistema de forma que o perfil seja em um formato de objeto
 public enum Perfil {
 
     USER(1, "User"),
@@ -33,5 +33,4 @@ public enum Perfil {
         }
         throw new IllegalArgumentException("id Invalido" + id);
     }
-
 }

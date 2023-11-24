@@ -67,6 +67,16 @@
       <scope>test</scope>
     </dependency>
 
+    
+    <!--Multipart-->
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-resteasy-multipart</artifactId>
+    </dependency>
+
+
+
+
     <!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-hibernate-validator -->
     <dependency>
       <groupId>io.quarkus</groupId>

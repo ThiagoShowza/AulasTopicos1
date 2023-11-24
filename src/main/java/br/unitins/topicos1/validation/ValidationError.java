@@ -7,9 +7,11 @@ import java.util.List;
 
 public class ValidationError extends Error {
 
-    record FieldError(String fieldName, String message) {};
+    record FieldError(String fieldName, String message) {
+    };
+
     private List<FieldError> errors = null;
-    
+
     public ValidationError(String code, String message) {
         super(code, message);
     }
