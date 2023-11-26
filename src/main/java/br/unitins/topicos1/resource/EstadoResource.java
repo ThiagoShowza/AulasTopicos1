@@ -3,6 +3,7 @@ package br.unitins.topicos1.resource;
 import br.unitins.topicos1.dto.EstadoDTO;
 import br.unitins.topicos1.dto.EstadoResponseDTO;
 import br.unitins.topicos1.service.EstadoService;
+import io.quarkus.logging.Log;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.Consumes;
@@ -50,6 +51,9 @@ public class EstadoResource {
 
     @GET
     public Response findAll() {
+        Log.debug("Exemplo de debug");
+
+
         return Response.ok(service.findByAll()).build();
     }
 
